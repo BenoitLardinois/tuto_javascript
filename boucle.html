@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script>
+			//boucle tant que, permet d'exécuter quelque chose tant qu'une condition n'est pas vérifiée. Boucle la plus "simple" mais la plus dangereuse
+			// let a = 0;
+			// while(a < 10){
+			// 	console.log('Bonjour' + a)
+			// 	a = a + 1
+			// }
+
+
+
+			// //boucle "pour" qui est plus prévisible
+			// // b = b + 1 peux s'écrire comme ça b++
+			// for(let b = 0; b < 10; b = b + 1){
+			// 	console.log('Hello')
+			// }
+
+			// //Permet de parcourir rapidement les notes
+			// const notes = [12, 13, 16, 8]
+			// for(let c = 0; c < notes.length; c++){
+			// 	//console.log(c) pour savoir cmb d'élément dans tableau
+			// 	console.log(notes[c])
+			// }
+
+			// const notes1 = [7, 3, 66, 58]
+			// for(let d in notes1){
+			// 	//console.log(d)
+			// 	console.log(notes1[d])
+			// }
+
+			// //permet d'acceder à une propriété de l'objet direcement
+			// const notes2 = {
+			// 	first: 1,
+			// 	second: 2,
+			// 	third: 3
+			// }
+			// for(let e in notes2){
+			// 	//console.log(d)
+			// 	console.log(notes2[e])
+			// }
+
+			// //For of si on s'interesse que au valeur
+			// //le for of ne marche que sur les choses itérables a savoir les tableaux
+			// const notes3 = [5, 9, 12, 20, 14, 19]
+			// const person = {
+			// 	firstname: 'Jack',
+			// 	lastname: 'Sparrow'
+			// }
+			// for(let note of notes3){
+			// 	console.log(note)
+			// }
+
+			// //Utilisation de la boucle "for of" sur une chaine de caractère
+			// //Permet de donner chaque lettres de gretting
+			// const greeting = 'Hi evreybody !'
+			// for(let letter of greeting){
+			// 	console.log(letter)
+			// }
+
+			// //Utilisation de la boucle "for in" pour donner l'index de la lettre
+			// const greeting1 = 'Coucou'
+			// for(let letter in greeting1){
+			// 	console.log(letter)
+			// 	//greeting1[2] renvoie "u" dans le navigateur
+			// }
+
+
+
+			//Exercices
+
+			//exercice fait sans fautes
+			// const get_number = prompt('Ecrivez un chiffre entre 0 et 10')
+
+			// if(get_number > 0 && get_number < 10){
+			// 	for(let x = get_number; x >= 0; x--){
+			// 		console.log(x)
+			// 	}
+			// } else {
+			// 	console.log("Votre chiffre n'est pas entre 0 et 10 !")
+			// }
+
+			//Correction:
+
+			//Avec la boucle while
+			// let get_number = prompt('Ecrivez un chiffre entre 0 et 10')
+
+			// if(get_number > 0 && get_number < 10){
+			// 	while(get_number >= 0){
+			// 		console.log(get_number)
+			// 		get_number = get_number - 1
+			// 		// ou get_number = get_number--
+			// 	}
+			// } else {
+			// 	console.log("Votre chiffre n'est pas entre 0 et 10 !")
+			// }
+
+
+
+			//Exercices
+			//Exercice correct
+			// let guess = 8
+			// let number = prompt('Devinez le chiffre secret, ecrivez votre chiffre') * 1 //permet de convertir string en number
+
+			// if(number === guess){
+			// 	console.log("Exact le chiffre qu'il fallait de deviner est bien 8")
+			// } else {
+			// 	while(number !== guess){
+			// 	number = prompt('Devinez le chiffre secret, ecrivez votre chiffre') * 1
+			// 	}
+			// 	console.log("Exact le chiffre qu'il fallait de deviner est bien 8")
+			// }
+
+			//Amélioration de cette exo
+			// let guess = 5
+			// let number
+			// while(number !== guess){
+			// 	number = prompt('Votre chiffre?') * 1
+			// 	if(number < guess){
+			// 		console.log('Plus')
+			// 	} else if(number > guess){
+			// 		console.log('Moins')
+			// 	}
+			// }	
+			// console.log('Bravo')
+
+			//Sortir de force d'une boucle avec "break"
+			let guess = 5
+			let number
+			while(true){
+				number = prompt('Votre chiffre?') * 1
+				if(number < guess){
+					console.log('Plus')
+				} else if(number > guess){
+					console.log('Moins')
+				} else {
+					break
+				}
+			}	
+			console.log('Bravo')
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

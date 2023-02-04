@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script>
+			// //Une fonction est un type d'objet particulier
+			// // Fonction globale pout tout le system
+			// 	function can_drive(age, country) {
+			// 		if((age >= 18 && country === 'FR') || (age >= 16 && country === 'US')){
+			// 			return true
+			// 			}
+			// 			return false
+			// 	}
+			// 	console.log(can_drive(20, 'FR'))
+
+
+
+			// // Fonction que dans une boucle ou condition
+			// 	if(true){
+			// 		const can_drive = function(age, country) {
+			// 		if((age >= 18 && country === 'FR') || (age >= 16 && country === 'US')){
+			// 			return true
+			// 			}
+			// 			return false
+			// 		}
+			// 	}
+			// 	const can_drive = function(){
+			// 		return  "hello";
+			// 	}
+			// 	console.log(can_drive(20, 'FR'))
+
+
+
+			//Une fonction n'est pas obligé de retourner quelque chose (n'as pas de return)
+			//undefined marque l'absance d'une valeur
+			// function greeting(name){
+			// 	console.log(`Bonjour ${name}`)
+			// }
+			// console.log(greeting('John'))
+
+
+
+			//Comme pour les boucles et les conditions, les fonctions peuvent accèder a des valeurs depuis l'extérieur
+			// let i = 0;
+			// function greeting(name){
+			// 	i++
+			// 	console.log(`Bonjour ${name}`)
+			// }
+			// console.log(i)
+			// console.log(greeting('John'))
+			// console.log(i)
+			// console.log(greeting('Adam'))
+			// console.log(i)
+
+
+			//Modifier Objet et tableaux pour toutes les variables en référence à ce tableau
+			// const notes = [12, 15, 7, 1];
+			// function up_notes(all_notes){
+			// 	all_notes[0]++
+			// 	//notes[0]++
+			// }
+			// up_notes(notes)
+			// console.log(notes)
+
+
+
+			//this fait référence à un objet globale, quand on apelle cette fonction on peut changer la valeur de this
+			// function my_function(){
+			// 	console.log(this)
+			// }
+			// my_function.call(125)
+
+
+
+			//Créer une fonction (a) au niveau d'un objet et appeler notre fonction sans lui passer de paramètre
+			// const a = {
+			// 	firstname: "Bruce",
+			// 	lastname: "Wayne",
+			// 	fullname: function(){
+			// 		//console.log(this)
+			// 		console.log(`${this.firstname} ${this.lastname}`)
+			// 	}
+			// }
+			// a.fullname()
+
+
+
+			//Dans le cadre des objets quand on créer une fonction sur des objets on va appeler ça une méthode, vu que ces des méthode on leur passe des paramètres ()
+			// const a = {
+			// 	firstname: "Bruce",
+			// 	lastname: "Wayne",
+			// 	fullname: function(){
+			// 		//console.log(this)
+			// 		console.log(`${this.firstname} ${this.lastname}`)
+			// 	}
+			// }
+			// a.fullname()
+			// console.log('Hello'.toUpperCase())
+
+
+
+			//Il exsite une autre manière de déclarer les fonctions, se sont les fonctions fléchées. La grosse diffrence étant le comportement de "this" à l'intérieur de la fonction
+			// const my_function = (param1, param2) => {
+			// 	console.log(param1, param2, this)
+			// }
+			// my_function.call(3, 1, 2)
+
+
+
+			//avantage des fonctions fléchées, c'est quelle peuvent return directement
+			// const sum = (a, b) => {
+			// 	return a + b
+			// }
+			// console.log(sum(5, 9))
+
+
+
+			//Les fonctions sont simplement qu'un type, il est possible de passer des fonctions en paramètre de fonction on apelle cela (fn) un callback
+			// const is_pair = function (a, cb){
+			// 	if(a % 2 === 0){
+			// 		cb(a)
+			// 	}			
+			// }
+			// is_pair(4, function(n){
+			// 	console.log('Mon nombre est pair' + n)
+			// })
+
+
+
+			//Exercices
+			// function get_a_random_number(max){
+			// 	return Math.floor(Math.random() * (max + 1));
+			// }
+			// const solution = get_a_random_number(10)
+			// console.log(solution)
+
+
+			// function is_right(n){
+			// 	return solution === n
+			// }
+			
+
+			// function guess(){
+			// 	const number = prompt('Entrez un chiffre') * 1
+			// 	return is_right(number)
+			// }
+
+
+			// for(i = 0; i <3; i++){
+			// 	if(guess()){
+			// 		console.log("Bravo")
+			// 		break;
+			// 	}else if (i === 2){
+			// 		console.log("Vous avez perdu")
+			// 	}
+			// }
+
+
+
+			//Exercices
+			function is_prime_number(n){
+				let a = Math.floor(Math.sqrt(n));
+				let b = n != 1;
+				if (n < 2){
+					return false;
+				}
+				for(let c = 2; c < a + 1; c++){
+					if(n % c == 0){
+						b = false;
+						break;
+					}
+				}
+				return b
+			}
+			console.log(is_prime_number(0))
+			console.log(is_prime_number(1))
+			console.log(is_prime_number(2))
+			console.log(is_prime_number(3))
+			console.log(is_prime_number(11))
+			console.log(is_prime_number(12))
+
+	
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

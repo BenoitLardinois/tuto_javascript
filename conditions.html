@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script>
+			//console.log("Bonjour toi")
+			//Les conditions permettent de tester quelque chose et d'exécuter le code uniquement si le teste est vérifié, condition = (true)
+
+			// if(true) {
+			// 	console.log("Bonjour toi")
+			// }
+
+
+
+			// !== là l'age est différent de 18
+
+			// const age = 24
+			// if(age !== 18) {
+			// 	console.log("T'es pas majeur")
+			// }
+
+
+
+			//Opérateurs logique créer des conditions plus complexes
+			//VRAI ET VRAI = VRAI &&
+			//VRAI ET FAUX = FAUX &&
+			//FAUX ET VRAI = FAUX &&
+			//FAUX ET FAUX = FAUX &&
+			//VRAI OU FAUX = VRAI ||
+			//FAUX OU VRAI = VRAI ||
+			//VRAI OU VRAI = VRAI ||
+			//FAUX OU FAUX = FAUX ||
+
+			// const age = 18
+			// const pays = 'FR'
+			// if(
+			// 	(pays === 'FR' && age >= 18) || 
+			// 	(pays === 'US' && age >= 16) 
+			// 	){
+			// 	console.log("Vous avez le droit de conduire")
+			// }
+
+
+
+			//La même manière d'écrire le code comme ci dessus mais plus propre
+			// const age = 13
+			// const pays = 'US'
+			// const us = pays === 'US' && age >= 16
+			// const fr = pays === 'FR' && age >= 18
+			// if(us || fr){
+			// 	console.log("Vous avez le droit de conduire")
+			// } else {
+			// 	console.log("Vous n'avez pas le droit de conduire")
+			// }
+
+
+
+			// const age = 17
+			// const pays = 'FR'
+			// const pays2 = 'US'
+			// const us = pays2 === 'US' && age >= 16
+			// const fr = pays === 'FR' && age >= 18
+			// if(fr){
+			// 	console.log("Vous avez le droit de conduire en France et au USA")
+			// } else if(us) {
+			// 	console.log("Vous avez le droit de conduire au USA")
+			// } else {
+			// 	console.log("Vous n'avez pas le droit de conduire")
+			// }
+
+
+
+			//Inverstion d'une condition comme ceci !true = false et !false = true
+			// const age = 13
+			// const pays = 'FR'
+			// const pays2 = 'US'
+			// const us = pays2 === 'US' && age >= 16
+			// const fr = pays === 'FR' && age >= 18
+			// if(!fr && !us){
+			// 	console.log("Vous n'avez pas le droit de conduire en France et au USA")
+			// } 
+
+
+
+			// Voici comment inverser un OU :
+			// !a && !b
+			// Différent de a ou différent de b:
+			// !A a || !b
+
+			// const age = 13
+			// const pays = 'FR'
+			// const pays2 = 'US'
+			// (pays === 'FR' && age >= 18) || 
+			// (pays === 'US' && age >= 16)
+
+			// !(pays === 'FR' && age >= 18) && 
+			// !(pays === 'US' && age >= 16)
+
+			// (pays !== 'FR' || age < 18) && 
+			// (pays !== 'US' || age < 16)
+
+
+
+			// mettre une condition sur une variable particulière et permet de vérifier si elle as différente valeurs:
+			// const age = 13
+			// const pays = 'US'
+			// switch(pays) {
+			// case 'FR' :
+			// 	console.log('Je suis en France')
+			// 	break //sortir de la condition
+			// case 'US' : 
+			// 	console.log('Je suis aux states')
+			// 	break
+			// default:
+			// 	console.log('Je suis dans un pays inconnu')
+			// 	break
+			// }
+			// Ceci aurait pu être écrit de la même manière que ci dessous:
+			// if(pays === 'FR'){
+
+			// } else if (pays2 === 'US') {
+
+			// } else {
+
+			// }
+
+
+
+			//Exercices:
+			// const age = prompt('Quel est votre âge?')
+			// if(age <= 13) {
+			// 	console.log("Regardez Lilo & Stitch")
+			// } else if(age < 13 || age < 18) {
+			// 	console.log("Regardez Matrix")
+			// } else {
+			// 	console.log("Regardez Evil Dead")
+			// }
+
+			//Correction (les deux sont bon :
+			// const age = prompt('Quel est votre âge?')
+			// if(age <= 13) {
+			// 	console.log("Regardez Lilo & Stitch")
+			// // Entre 13 et 18 s'écrit comme ci dessous:
+			// } else if(age > 13 && age < 18) {
+			// 	console.log("Regardez Matrix")
+			// } else {
+			// 	console.log("Regardez Evil Dead")
+			// }
+
+
+			// //Exercices:
+			// const year = 2023
+			// const birth_year = prompt('Quelle est votre année de naissance?')
+			// const age = year - birth_year
+			// if(age <= 13) {
+			// 	console.log("Regardez Lilo & Stitch")
+			// } else if(age < 18) {
+			// 	console.log("Regardez Matrix")
+			// } else {
+			// 	console.log("Regardez Evil Dead")
+			// }
+
+			//Aucunes correction, exercice sans faute
+
+
+			//Exercices:
+			// const a = prompt('Ecrivez un permier nombre')
+			// const b = prompt('Ecrivez un deuxième nombre')
+			// let c = a * b
+			// let text = c.toString()
+
+			// Correction; incomprhension de l'exo
+			// const a = prompt('Ecrivez un permier nombre')
+			// const b = prompt('Ecrivez un deuxième nombre')
+			// const result = a * b
+			// if(result > 0) {
+			// 	console.log(`${a}x${b}=${result} est positif`)
+			// } else {
+			// 	console.log(`${a}x${b}=${result} est négatif`)
+			// }
+			//Mais il y a la posibilité d'écrire ce code plus proprement
+			const a = prompt('Ecrivez un permier nombre')
+			const b = prompt('Ecrivez un deuxième nombre')
+			const result = a * b
+			let c //Déclaration d'une variable qu'on modifie plus tard
+			//Imbriqué des condition commme ci dessous:
+			if(isNaN(result)){
+				console.log(`Opération impossible: ${a}x${b}`)
+			} else{
+					if(result >= 0) {
+						c = "est positif"
+					} else {
+						c = "est négatif"
+					}
+					console.log(`${a}x${b}=${result} est ${c}`)
+				}
+		</script>
+	</head>
+	
+	<body>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script>
+			// "const" création d'une variable qui ne pourra jamais être assignée(changée):
+			const number = 3;
+			const number1 = 4.34;
+
+			const string = 'Ajourd\'hui I\'am good';
+			const string1 = "Ajourd'hui\nComment va ?";
+			const string2 = `Ajourd'hui les gens`;
+
+			const boolean = true;
+			const boolean1 = null;
+			const boolean2 = undefined; // "undefined" indique qu'une variable n'est pas définie
+
+			const tableau = [13, 14, 8, 9, 
+				'hello', [2, 4, 7]
+				];
+
+			// "objet" souvegarde des données plus complexes que les tableaux avec des clés:
+			const objet = {firstname: "John", 
+				lastname: "Lennon", age: 24, 
+				notes: [12, 14 ,15], job: {name: "Cariste", 
+				hours: 42},
+				'Ajourd\'hui les gens': 23, //clé qui ne respecte pas les convention des variables
+				[string]: 47 //Faire en sorte que c'est la variable string qui est utilisé
+			};
+			// Dans la console :
+			// objet['firstname']
+			// "John"
+			// const clef = 'firstname'
+			// undefined
+			// objet[clef]
+			// "John"
+
+			
+			let b = 4; // "let" permet de changer la valeur d'une variable
+			b = 10;
+
+			var e = 7; // "var" très vielle manière de créer une variable (plus utilisé de nos jours)(équivalent de "let")
+			e = 2;
+
+			z = 5; // si rien n'est ecrit alors c'est équivalent de "var" mais ça peut être considéré comme une erreur ! 
+
+			// " typeof string2 " pour connaitre la propriété d'une variable
+
+			// toute les types de variables en JS sont des objets
+
+			// 4 + "3" dans ce cas JS considére le nombre (4) comme une chaine de caractère et vas faire une concaténation 4 + "3" = "43"
+
+			//comment sont passées les variables:
+			let y = "Hello";
+			let o = y; // dans console: o = 'bonjour', la let y reste inchangé
+
+			const objet2 = objet // dans console: objet2 = "lol"   ---> impossible parceque que c'est variable const 
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>
