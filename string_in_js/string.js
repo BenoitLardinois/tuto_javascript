@@ -47,4 +47,3 @@ console.log(arr);
 //ET faire l'inverse (en array en est bien d'accord) comme ceci:
 let string = arr.join();
 console.log(string);
-
